@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+@font-face {
+    font-family: 'FUNGIS';
+    src: url('../static/FUNGIS Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MONT';
+    src: url('../static/Mont-HeavyDEMO.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BOLD';
+    src: url('../static/theboldfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MEAN SANS';
+    src: url('../static/MEANSANS.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MEAN SERI';
+    src: url('../static/MEANSERI.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'COOL';
+    src: url('../static/coolvetica rg.otf') format('opentype');
+}
+
+html {
+    /*background-color: ghostwhite;*/
+    /*background-size: cover;*/
+    /*height: 100%;*/
+}
+
+.logo {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+    width: 100%;
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    word-spacing: -0.1em;
+    font-size: 18px;
+    /*font-weight: 500;*/
+    list-style: none;
+    text-align: center;
+    z-index: 1;
+}
+
+.logo > div > li > a {
+    color: black;
+}
+
+.item1 {
+    margin-left: 15px;
+    text-align: left;
+}
+
+.item3 {
+    margin-right: 15px;
+    text-align: right;
+}
+
+p {
+    font-size: 13px;
+}
+
+#nav {
+    font-family: owners-narrow, sans-serif;
+    /*font-weight: 700;*/
+    /*font-style: italic;*/
+    font-weight: 700;
+    letter-spacing: 0em;
+    font-size: 30px;
+    line-height: 0.9;
+    width: 100%;
+    height: 100%;
+    alignment: center;
+    text-align: center;
+    list-style: none;
+    padding-top: 100px;
+    padding-bottom: 15%;
+    position: fixed;
+    /*background: white;*/
+    /*background-size: cover;*/
+    background: black;
+    /*box-shadow:  rgba(0, 0, 0, 0.3) 0 0 0 9999px;*/
+    /*backdrop-filter: blur(7px);*/
+    z-index: 2;
+}
+
+#nav > ul > li > a {
+    font-family: owners-narrow, sans-serif;
+    font-weight: 700;
+    /*font-style: italic;*/
+    letter-spacing: 0em;
+    color: dimgray;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+#nav > ul > li > a:hover {
+    color: #3CFD96;
+}
+
+#nav > li {
+    color: dimgray;
+}
+
+#nav > li > a {
+    color: dimgray;
+    text-decoration: none;
+
+}
+
+#nav > li > a:hover {
+    color: #3CFD96;
+}
+
+.container {
+    padding-top: 50px;
+    width: 100%;
+}
+
+/*검색*/
+
+#search > a {
+    color: black;
+}
+
+#search-box {
+    width: 100%;
+    text-align: center;
+}
+
+
+#search-bar {
+    background-color: transparent;
+    text-align: center;
+    /*border: none;*/
+    /*border-bottom: 1px solid black;*/
+    font-family: owners, sans-serif;
+    font-weight: 400;
+    width: 270px;
+    font-size: 20px;
+    margin: 10px auto;
+    outline: none;
+    color: gray;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    border-color: gray;
+
+
+}
+
+#search-key {
+    /*font-family: FUNGIS;*/
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+#search-key:hover {
+    background-color: #3CFD96;
+}
+
+
+h1 {
+    font-family: owners, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    /*letter-spacing: -0.02em;*/
+    margin-top: 20px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 55px;
+    color: black;
+}
+
+h2 {
+    font-family: owners, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    /*font-style:italic;*/
+    /*letter-spacing :-0.02em;*/
+    font-size: 16px;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: owners, sans-serif;
+    /*font-weight: 700;*/
+    /*font-style: italic;*/
+    font-size: 15px;
+    font-weight: 400;
+}
+
+h4 {
+    font-family: owners, sans-serif;
+    /*font-weight: 700;*/
+    /*font-style: italic;*/
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+#pop-cards, #period-cards, #search-cards {
+    /*position: fixed;*/
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cards {
+    /*position: relative;*/
+    display: inline-block;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0;
+    -ms-overflow-style: none;
+    /*margin-right: 2px;*/
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+}
+
+/*.card-img {*/
+/*    opacity: 100%;*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    border-radius: 70%;*/
+/*    !*overflow: hidden;*!*/
+/*    object-fit: cover;*/
+/*}*/
+/*.card-img:hover{*/
+/*    opacity: 70%;*/
+/*}*/
+
+.card-portrait {
+    margin: 5px;
+    text-align: center;
+}
+
+.card-name {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#more-cards {
+    width: 100%;
+    alignment: center;
+    text-align: center;
+}
+
+.card-img {
+    opacity: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    /*overflow: hidden;*/
+    object-fit: cover;
+    filter: grayscale(50);
+}
+
+.card-img:hover {
+    filter: grayscale(0);
+    opacity: 70%;
+}
+
+#pages, #more-pages {
+    margin-top: 10px;
+}
+
+#intro, #library, #library-result-box2 {
+    /*width: 80%;*/
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#library {
+    text-align: center;
+}
+
+.more-grid, .search-result-grid {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 25px;
+    /*grid-template-rows: 1fr 50px;*/
+    /*line-height: 100%;*/
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    color: black;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    word-spacing: -3px;
+}
+
+.library-grid {
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 30px 25px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    word-spacing: -3px;
+}
+
+.hr1 {
+    background: transparent;
+    /*background: rgba(0, 0, 0, 0.6);*/
+    border: 0;
+    height: 3px;
+    display: block;
+    /*margin-top: 5px;*/
+    /*margin-bottom: 10px;*/
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hr2 {
+    margin-right: 10px;
+    background: black;
+    /*background: rgba(0, 0, 0, 0.6);*/
+    border: 0;
+    height: 1px;
+    display: block;
+    /*margin-top: 5px;*/
+    /*margin-bottom: 10px;*/
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+
+/*팝업*/
+.content > input[type="text"] {
+    height: 30px;
+    width: 300px;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    /*font-style: italic;*/
+    font-family: owners, sans-serif;
+    /*font-weight: 700;*/
+    /*font-style: italic;*/
+    font-weight: 400;
+    z-index: 5;
+}
+
+
+.popup {
+    position: fixed;
+    border: none;
+    border-radius: 20px 20px 20px 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    height: 100px;
+    margin: 200px auto;
+    /*margin-top: 50%;*/
+    /*margin-bottom: 50%;*/
+    padding: 20px;
+    background: white;
+    /*border-radius: 5px;*/
+    width: 80%;
+    /*position: relative;*/
+    /*transition: all 2s ease-in-out;*/
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px;
+    /*box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px, rgba(0, 0, 0, 0.1) 0px 0px 0px 0px;*/
+    z-index: 1;
+}
+
+
+.popup .X {
+    position: absolute;
+    top: 60px;
+    right: 20%;
+    transition: all 200ms;
+    font-family: owners, sans-serif;
+    /*font-weight: 700;*/
+    /*font-style: italic;*/
+    font-weight: 700;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    float: left;
+}
+
+.popup .O {
+    position: absolute;
+    top: 60px;
+    left: 20%;
+    transition: all 200ms;
+    font-family: owners, sans-serif;
+    /*font-weight: 700;*/
+    /*font-style: italic;*/
+    font-weight: 700;
+    font-size: 25px;
+    text-decoration: none;
+    /*color: #3CFD96;*/
+    color: #3CFD96;
+    /*font-weight: bold;*/
+    float: left;
+}
+
+.popup .content {
+    max-height: 500px;
+    overflow: auto;
+
+}
+
+/*태그*/
+.save, .edit, .del {
+    color: black;
+    font-size: 15px;
+    margin-top: 0px;
+    padding-left: 6px;
+    width: 23px;
+    height: 23px;
+    display: inline;
+    float: left;
+    margin-right: 20px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.save:hover, .edit:hover, .del:hover {
+    color: #3CFD96;
+    background-color: black;
+
+}
+
+/*태그 버튼*/
+.checkbox input {
+    display: none;
+}
+
+.checkbox_icon {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px 20px 20px 20px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    margin: 3px;
+    font-family: 'Roboto Mono', monospace;
+    /*font-style: italic;*/
+    /*font-family: 'Roboto Mono', monospace;*/
+    font-size: 20px;
+}
+
+.checkbox_icon:hover {
+    background-color: black;
+    color: #3CFD96;
+}
+
+.checkbox input:checked + .checkbox_icon {
+    background-color: black;
+    color: #3CFD96;
+}
+
+
+button {
+    border: 0;
+    outline: 0;
+}
+
+#library > .title {
+    /*font-family: FUNGIS;*/
+    padding-top: 3px;
+    padding-left: 5px;
+    font-size: 25px;
+    /*font-style: italic;*/
+}
+
+.library-grid > h5 > span {
+    /*font-weight: bold;*/
+    color: grey;
+    /*border: 1px solid black;*/
+    /*border-radius: 10px 10px 10px 10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*로그인*/
+.ID, .PW {
+    outline: none;
+    /*border: none;*/
+    background: transparent;
+    font-size: 23px;
+    /*font-style: italic;*/
+    /*font-family: FUNGIS;*/
+    /*font-family: 'Roboto Mono', monospace;*/
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    border-color: lightgray;
+}
+
+.loginbtn, .signupbtn {
+    font-size: 20px;
+    /*font-family: 'Roboto Mono', monospace;*/
+    /*font-family: FUNGIS;*/
+    /*font-style: italic;*/
+    font-family: owners, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    border: 1px solid black;
+    border-radius: 30px 30px 30px 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*color: whitesmoke;*/
+    /*background-color: black;*/
+    color: black;
+}
+
+.loginbtn:hover, .signupbtn:hover {
+    border: 1px solid transparent;
+    border-radius: 30px 30px 30px 30px;
+    /*color: black;*/
+    /*background-color: beige;*/
+    color: #3CFD96;
+    background-color: black;
+
+}
+
+#login, #register {
+    text-align: center;
+}
+
+#keyShow, #keyShow2 {
+    /*position: absolute;*/
+    /*display: none;*/
+    /*margin-left: -50px;*/
+    /*margin-top: 24px;*/
+    font-family: owners, sans-serif;
+    font-weight: 300;
+    font-size: 9px;
+    cursor: pointer;
+    color: grey;
+}

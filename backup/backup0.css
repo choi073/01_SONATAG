@@ -1,0 +1,1049 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap');
+
+@font-face {
+    font-family: 'FUNGIS';
+    src: url('../static/FUNGIS Regular.ttf') format('truetype');
+}
+
+@media (max-width: 780px) {
+    /*모바일*/
+    .img_responsive {
+        width: 100%;
+        height: auto;
+    }
+
+    #keyShow, #keyShow2 {
+        /*position: absolute;*/
+        /*display: none;*/
+        /*margin-left: -50px;*/
+        /*margin-top: 24px;*/
+        font-size: 9px;
+        cursor: pointer;
+        color: grey;
+    }
+
+    #intro {
+        /*font-family: 'Roboto Mono', monospace;*/
+        margin-top: 10px;
+        font-family: FUNGIS;
+        font-size: 15px;
+        letter-spacing: -0.5px;
+    }
+
+
+    html {
+        /*background-color: #f5f5f6;*/
+        /*background: linear-gradient(gray, yellow);*/
+        background-color: #ECECED;
+        background-size: cover;
+    }
+
+    .hr1 {
+        background: transparent;
+        /*background: rgba(0, 0, 0, 0.6);*/
+        border: 0;
+        height: 3px;
+        display: block;
+        /*margin-top: 5px;*/
+        /*margin-bottom: 10px;*/
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hr2 {
+        margin-right: 10px;
+        background: black;
+        /*background: rgba(0, 0, 0, 0.6);*/
+        border: 0;
+        height: 1px;
+        display: block;
+        /*margin-top: 5px;*/
+        /*margin-bottom: 10px;*/
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    /*네비게이션*/
+    nav {
+        display: inline-block;
+        /*padding-left: 5px;*/
+        /*padding-top: 53px;*/
+        /*position: fixed;*/
+        top: 0;
+        left: 0;
+        width: auto;
+        /*width: auto;*/
+        text-align: center;
+        /*float: left;*/
+        overflow: auto;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-family: FUNGIS;
+        font-size: 25px;
+        letter-spacing: -1px;
+    }
+
+    a, a:link, a:visited, a:hover {
+        color: black;
+        text-decoration: none;
+
+    }
+
+    nav > ul, ol, li {
+        display: inline-block;
+        list-style: none;
+        line-height: 97%;
+    }
+
+    nav li:hover {
+        /*background-color:#FE5431;*/
+        /*opacity: 0.6;*/
+        background-color: #3CFD96;
+
+    }
+
+    nav > ul {
+        font-style: italic;
+        font-size: 25px;
+        /*padding-left: 20px;*/
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    /*그리드*/
+    .container {
+        display: grid;
+
+        /*grid-template-columns: 1fr 3fr 3fr;*/
+        grid-template-rows: 100px 580px auto;
+    }
+
+    .logo {
+        text-transform: uppercase;
+        font-family: FUNGIS;
+        font-size: 20px;
+        /*font-weight: bold;*/
+        letter-spacing: 0px;
+        color: black;
+        position: fixed;
+        z-index: 10;
+        /*font-family: 'Roboto Mono', monospace;*/
+        /*font-size: 20px;*/
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding-top: 5px;
+        /*background-color: whitesmoke;*/
+        /*backdrop-filter: blur(50px);*/
+        border-bottom: 1px solid black;
+    }
+
+    .item {
+        margin-top: 30px;
+        /*padding-top: 70px;*/
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: 710px;
+        /*border-right: 1px solid black;*/
+        /*border-left: 2px solid black;*/
+
+    }
+
+    .more-grid, .search-result-grid {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 1fr 25px;
+        /*grid-template-rows: 1fr 50px;*/
+        /*line-height: 100%;*/
+        font-family: 'Roboto Mono', monospace;
+        color: black;
+        font-size: 15px;
+        letter-spacing: -1px;
+        word-spacing: -3px;
+    }
+
+    .library-grid {
+        color: black;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 1fr 30px 25px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+        letter-spacing: -1px;
+        word-spacing: -3px;
+    }
+
+
+    #more-pages {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: 710px;
+    }
+
+    /*카드*/
+    #pop-cards, #period-cards {
+        margin-top: 5px;
+    }
+
+    .card-portrait {
+        /*border: 2px solid red;*/
+        width: 134px;
+        height: 134px;
+        display: inline-block;
+        position: relative;
+        float: left;
+        /*margin-right: 5px;*/
+        margin-left: 9px;
+        margin-bottom: 9px;
+        text-align: center;
+    }
+
+    .card-content {
+        padding-top: 0;
+    }
+
+    .card-portrait:hover {
+        /*opacity: 0.8;*/
+    }
+
+    #search-cards > .cards {
+        width: auto;
+        height: 150px;
+    }
+
+
+    .card-portrait:hover .card-name {
+        /*opacity: 0.8;*/
+        visibility: visible;
+    }
+
+    .card-name {
+        /*text-transform: uppercase;*/
+        letter-spacing: 0px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+        font-style: italic;
+        width: 134px;
+        height: auto;
+        background-color: black;
+        /*font-style: italic;*/
+        position: absolute;
+        bottom: 0px;
+        /*top: 50px;*/
+        z-index: 1;
+        color: #3CFD96;
+        visibility: hidden;
+    }
+
+    #search-cards > .cards > .card-portrait > .card-img {
+        padding-right: 10px;
+    }
+
+    .cards2 {
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 2px auto 2px;
+        grid-template-rows: 1fr 100px;
+    }
+
+    .card-content2 > h2, .card-content > h2 {
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding-left: 7px;
+    }
+
+    .card-content2 > h4, .card-content > h4 {
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-size: 20px;
+        font-style: italic;
+        padding-left: 7px;
+    }
+
+    .card-content2 > h3, .card-content > h3 {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: -0.8px;
+        padding-left: 7px;
+    }
+
+    .card-img2 {
+        width: 600px;
+    }
+
+
+    /*팝업*/
+    .content > input[type="text"] {
+        height: 30px;
+        width: 400px;
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        font-style: italic;
+        font-family: 'Roboto Mono', monospace;
+        z-index: 5;
+
+
+    }
+
+    .popup {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        height: 100px;
+        margin: 300px auto;
+        padding: 20px;
+        background: whitesmoke;
+        /*border-radius: 5px;*/
+        width: 500px;
+        /*position: relative;*/
+        transition: all 2s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px;
+        /*box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px, rgba(0, 0, 0, 0.1) 0px 0px 0px 0px;*/
+        z-index: 1;
+
+    }
+
+    .popup .X {
+        position: absolute;
+        top: 60px;
+        right: 80px;
+        transition: all 200ms;
+        font-family: FUNGIS;
+        font-size: 25px;
+        text-decoration: none;
+        color: black;
+        float: left;
+    }
+
+    .popup .O {
+        position: absolute;
+        top: 60px;
+        right: 350px;
+        transition: all 200ms;
+        font-family: FUNGIS;
+        font-size: 25px;
+        text-decoration: none;
+        /*color: #3CFD96;*/
+        color: #3CFD96;
+        /*font-weight: bold;*/
+        float: left;
+    }
+
+    .popup .content {
+        max-height: 500px;
+        overflow: auto;
+
+    }
+
+    /*태그*/
+    .save, .edit, .del {
+        font-size: 15px;
+        margin-top: 0px;
+        padding-left: 6px;
+        width: 23px;
+        height: 23px;
+        display: inline;
+        float: left;
+        margin-right: 20px;
+        border: 1px solid black;
+        background-color: transparent;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .save:hover, .edit:hover, .del:hover {
+        color: #3CFD96;
+        background-color: black;
+
+    }
+
+
+    /*로그인*/
+    .ID, .PW {
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 23px;
+        font-style: italic;
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+    }
+
+    .loginbtn, .signupbtn {
+        font-size: 20px;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-family: FUNGIS;
+        /*font-style: italic;*/
+        border: 1px solid black;
+        border-radius: 30px 30px 30px 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        /*color: whitesmoke;*/
+        /*background-color: black;*/
+        color: black;
+    }
+
+    .loginbtn:hover, .signupbtn:hover {
+        border: 1px solid transparent;
+        border-radius: 30px 30px 30px 30px;
+        /*color: black;*/
+        /*background-color: beige;*/
+        color: #3CFD96;
+        background-color: black;
+
+    }
+
+    /*검색*/
+    #search-key {
+        font-family: FUNGIS;
+        font-size: 25px;
+        padding-left: 5px;
+    }
+
+    #search-key:hover {
+        background-color: #3CFD96;
+    }
+
+    .search-section {
+        font-family: FUNGIS;
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        /*padding-top: 5px;*/
+
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .search-section > input[type="text"] {
+
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 25px;
+        font-style: italic;
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+        z-index: 5;
+    }
+
+    #search-submit {
+        font-family: FUNGIS;
+        margin-top: 0;
+        margin-right: 25px;
+        /*padding-bottom: 0px;*/
+        /*padding-top: 5px;*/
+        /*padding-left: 10px;*/
+        /*padding-right: 25px;*/
+        font-size: 25px;
+        width: 40px;
+        /*font-style: italic;*/
+        /*border: 1px solid black;*/
+        /*border-radius: 30px 30px 30px 30px;*/
+        color: black;
+        background-color: transparent;
+    }
+
+    #search-submit:hover {
+        background-color: #3CFD96;
+        /*color: #3CFD96;*/
+        /*background-color: black;*/
+    }
+
+
+    /*태그 버튼*/
+    .checkbox input {
+        display: none;
+    }
+
+    .checkbox_icon {
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: 1px solid black;
+        color: black;
+        border-radius: 20px 20px 20px 20px;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 2px;
+        margin: 3px;
+        font-family: FUNGIS;
+        /*font-style: italic;*/
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-size: 20px;
+    }
+
+    .checkbox_icon:hover {
+        background-color: black;
+        color: #3CFD96;
+    }
+
+    .checkbox input:checked + .checkbox_icon {
+        background-color: black;
+        color: #3CFD96;
+    }
+
+
+    button {
+        border: 0;
+        outline: 0;
+    }
+
+    #library > .title {
+        font-family: FUNGIS;
+        padding-top: 3px;
+        padding-left: 5px;
+        font-size: 25px;
+        font-style: italic;
+    }
+
+    .library-grid > h5 > span {
+        /*font-weight: bold;*/
+        color: grey;
+        /*border: 1px solid black;*/
+        /*border-radius: 10px 10px 10px 10px;*/
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+}
+
+@media (min-width: 780px) {
+
+    .img_responsive {
+        width: 100%;
+        height: auto;
+    }
+
+
+    #keyShow, #keyShow2 {
+        /*position: absolute;*/
+        /*display: none;*/
+        /*margin-left: -50px;*/
+        /*margin-top: 24px;*/
+        font-size: 9px;
+        cursor: pointer;
+        color: grey;
+    }
+
+    #intro {
+        /*font-family: 'Roboto Mono', monospace;*/
+        margin-top: 10px;
+        font-family: FUNGIS;
+        font-size: 15px;
+        letter-spacing: -0.5px;
+    }
+
+
+    html {
+        /*background-color: #f5f5f6;*/
+        /*background: linear-gradient(gray, yellow);*/
+        background-color: #ECECED;
+        background-size: cover;
+    }
+
+    .hr1 {
+        background: transparent;
+        /*background: rgba(0, 0, 0, 0.6);*/
+        border: 0;
+        height: 3px;
+        display: block;
+        /*margin-top: 5px;*/
+        /*margin-bottom: 10px;*/
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hr2 {
+        margin-right: 10px;
+        background: black;
+        /*background: rgba(0, 0, 0, 0.6);*/
+        border: 0;
+        height: 1px;
+        display: block;
+        /*margin-top: 5px;*/
+        /*margin-bottom: 10px;*/
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    /*네비게이션*/
+    nav {
+        /*display: inline-block;*/
+        padding-left: 5px;
+        padding-top: 53px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        /*width: auto;*/
+        text-align: left;
+        float: left;
+        overflow: auto;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-family: FUNGIS;
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    a, a:link, a:visited, a:hover {
+        color: black;
+        text-decoration: none;
+
+    }
+
+    nav > ul, ol, li {
+        list-style: none;
+        line-height: 97%;
+    }
+
+    nav li:hover {
+        /*background-color:#FE5431;*/
+        /*opacity: 0.6;*/
+        background-color: #3CFD96;
+
+    }
+
+    nav > ul {
+        font-style: italic;
+        font-size: 25px;
+        /*padding-left: 20px;*/
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    /*그리드*/
+    .container {
+        display: grid;
+
+        /*grid-template-columns: 1fr 3fr 3fr;*/
+        grid-template-columns: 200px 580px auto;
+    }
+
+    .logo {
+        text-transform: uppercase;
+        font-family: FUNGIS;
+        font-size: 20px;
+        /*font-weight: bold;*/
+        letter-spacing: 0px;
+        color: black;
+        position: fixed;
+        z-index: 10;
+        /*font-family: 'Roboto Mono', monospace;*/
+        /*font-size: 20px;*/
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        padding-top: 5px;
+        /*background-color: whitesmoke;*/
+        /*backdrop-filter: blur(50px);*/
+        border-bottom: 1px solid black;
+    }
+
+    .item {
+        margin-top: 70px;
+        /*padding-top: 70px;*/
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: 710px;
+        /*border-right: 1px solid black;*/
+        /*border-left: 2px solid black;*/
+
+    }
+
+    .more-grid, .search-result-grid {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 1fr 25px;
+        /*grid-template-rows: 1fr 50px;*/
+        /*line-height: 100%;*/
+        font-family: 'Roboto Mono', monospace;
+        color: black;
+        font-size: 15px;
+        letter-spacing: -1px;
+        word-spacing: -3px;
+    }
+
+    .library-grid {
+        color: black;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: grid;
+        grid-template-columns: 1fr 30px 25px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+        letter-spacing: -1px;
+        word-spacing: -3px;
+    }
+
+
+    #more-pages {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: 710px;
+    }
+
+    /*카드*/
+    #pop-cards, #period-cards {
+        margin-top: 5px;
+    }
+
+    .card-portrait {
+        /*border: 2px solid red;*/
+        width: 134px;
+        height: 134px;
+        display: inline-block;
+        position: relative;
+        float: left;
+        /*margin-right: 5px;*/
+        margin-left: 9px;
+        margin-bottom: 9px;
+        text-align: center;
+    }
+
+    .card-content {
+        padding-top: 0;
+    }
+
+    .card-portrait:hover {
+        /*opacity: 0.8;*/
+    }
+
+    #search-cards > .cards {
+        width: auto;
+        height: 150px;
+    }
+
+
+    .card-portrait:hover .card-name {
+        /*opacity: 0.8;*/
+        visibility: visible;
+    }
+
+    .card-name {
+        /*text-transform: uppercase;*/
+        letter-spacing: 0px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 15px;
+        font-style: italic;
+        width: 134px;
+        height: auto;
+        background-color: black;
+        /*font-style: italic;*/
+        position: absolute;
+        bottom: 0px;
+        /*top: 50px;*/
+        z-index: 1;
+        color: #3CFD96;
+        visibility: hidden;
+    }
+
+    #search-cards > .cards > .card-portrait > .card-img {
+        padding-right: 10px;
+    }
+
+    .cards2 {
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: 2px auto 2px;
+        grid-template-rows: 1fr 100px;
+    }
+
+    .card-content2 > h2, .card-content > h2 {
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding-left: 7px;
+    }
+
+    .card-content2 > h4, .card-content > h4 {
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-size: 20px;
+        font-style: italic;
+        padding-left: 7px;
+    }
+
+    .card-content2 > h3, .card-content > h3 {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: -0.8px;
+        padding-left: 7px;
+    }
+
+    .card-img2 {
+        width: 600px;
+    }
+
+
+    /*팝업*/
+    .content > input[type="text"] {
+        height: 30px;
+        width: 400px;
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        font-style: italic;
+        font-family: 'Roboto Mono', monospace;
+        z-index: 5;
+
+
+    }
+
+    .popup {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+        height: 100px;
+        margin: 300px auto;
+        padding: 20px;
+        background: whitesmoke;
+        /*border-radius: 5px;*/
+        width: 500px;
+        /*position: relative;*/
+        transition: all 2s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px;
+        /*box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 9999px, rgba(0, 0, 0, 0.1) 0px 0px 0px 0px;*/
+        z-index: 1;
+
+    }
+
+    .popup .X {
+        position: absolute;
+        top: 60px;
+        right: 80px;
+        transition: all 200ms;
+        font-family: FUNGIS;
+        font-size: 25px;
+        text-decoration: none;
+        color: black;
+        float: left;
+    }
+
+    .popup .O {
+        position: absolute;
+        top: 60px;
+        right: 350px;
+        transition: all 200ms;
+        font-family: FUNGIS;
+        font-size: 25px;
+        text-decoration: none;
+        /*color: #3CFD96;*/
+        color: #3CFD96;
+        /*font-weight: bold;*/
+        float: left;
+    }
+
+    .popup .content {
+        max-height: 500px;
+        overflow: auto;
+
+    }
+
+    /*태그*/
+    .save, .edit, .del {
+        font-size: 15px;
+        margin-top: 0px;
+        padding-left: 6px;
+        width: 23px;
+        height: 23px;
+        display: inline;
+        float: left;
+        margin-right: 20px;
+        border: 1px solid black;
+        background-color: transparent;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .save:hover, .edit:hover, .del:hover {
+        color: #3CFD96;
+        background-color: black;
+
+    }
+
+
+    /*로그인*/
+    .ID, .PW {
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 23px;
+        font-style: italic;
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+    }
+
+    .loginbtn, .signupbtn {
+        font-size: 20px;
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-family: FUNGIS;
+        /*font-style: italic;*/
+        border: 1px solid black;
+        border-radius: 30px 30px 30px 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        /*color: whitesmoke;*/
+        /*background-color: black;*/
+        color: black;
+    }
+
+    .loginbtn:hover, .signupbtn:hover {
+        border: 1px solid transparent;
+        border-radius: 30px 30px 30px 30px;
+        /*color: black;*/
+        /*background-color: beige;*/
+        color: #3CFD96;
+        background-color: black;
+
+    }
+
+    /*검색*/
+    #search-key {
+        font-family: FUNGIS;
+        font-size: 25px;
+        padding-left: 5px;
+    }
+
+    #search-key:hover {
+        background-color: #3CFD96;
+    }
+
+    .search-section {
+        font-family: FUNGIS;
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        /*padding-top: 5px;*/
+
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .search-section > input[type="text"] {
+
+        outline: none;
+        border: none;
+        background: transparent;
+        font-size: 25px;
+        font-style: italic;
+        font-family: FUNGIS;
+        /*font-family: 'Roboto Mono', monospace;*/
+        z-index: 5;
+    }
+
+    #search-submit {
+        font-family: FUNGIS;
+        margin-top: 0;
+        margin-right: 25px;
+        /*padding-bottom: 0px;*/
+        /*padding-top: 5px;*/
+        /*padding-left: 10px;*/
+        /*padding-right: 25px;*/
+        font-size: 25px;
+        width: 40px;
+        /*font-style: italic;*/
+        /*border: 1px solid black;*/
+        /*border-radius: 30px 30px 30px 30px;*/
+        color: black;
+        background-color: transparent;
+    }
+
+    #search-submit:hover {
+        background-color: #3CFD96;
+        /*color: #3CFD96;*/
+        /*background-color: black;*/
+    }
+
+
+    /*태그 버튼*/
+    .checkbox input {
+        display: none;
+    }
+
+    .checkbox_icon {
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: 1px solid black;
+        color: black;
+        border-radius: 20px 20px 20px 20px;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 2px;
+        margin: 3px;
+        font-family: FUNGIS;
+        /*font-style: italic;*/
+        /*font-family: 'Roboto Mono', monospace;*/
+        font-size: 20px;
+    }
+
+    .checkbox_icon:hover {
+        background-color: black;
+        color: #3CFD96;
+    }
+
+    .checkbox input:checked + .checkbox_icon {
+        background-color: black;
+        color: #3CFD96;
+    }
+
+
+    button {
+        border: 0;
+        outline: 0;
+    }
+
+    #library > .title {
+        font-family: FUNGIS;
+        padding-top: 3px;
+        padding-left: 5px;
+        font-size: 25px;
+        font-style: italic;
+    }
+
+    .library-grid > h5 > span {
+        /*font-weight: bold;*/
+        color: grey;
+        /*border: 1px solid black;*/
+        /*border-radius: 10px 10px 10px 10px;*/
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}

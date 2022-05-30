@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
+    <title>SONATAG</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
+    <link href="/static/stylesheet.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="/static/common.js"></script>
+
+    <!-- 쿠키 사용을 위한 Jquery-cookie 임포트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!--        파비콘 생성-->
+    <link rel="shortcut icon" href="/static/favicon.png">
+    <link rel="icon" type="image/gif" href="/static/favicon.png">
+
+    <meta property="og:title" content="SONATAG"/>
+    <meta property="og:description" content="소나태그 - 나만의 방식으로 클래식을 기억해 보세요."/>
+    <meta property="og:image" content="{{ url_for('static', filename='ogimg.png') }}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--        Adobe Font-->
+    <link rel="stylesheet" href="https://use.typekit.net/kzz0lbs.css">
+
+
+    <!--        <link rel="stylesheet" media="screen and (min-width:768px)" href="/static/backup1.css">-->
+    <!--        <link rel="stylesheet" media="screen and (max-width:768px)" href="/static/stylesheet.css">-->
+
+
+</head>
+<body>
+<div class="logo">
+    <div class="item1">
+        <p id="menu"><img src="/static/menu.png" style="width: 25px;"></p>
+
+    </div>
+    <div class="item2">
+        <li><a onclick="index()">SONATAG</a><br></li>
+    </div>
+    <div class="item3">
+        <li><a onclick="show_login()" id="nav-log">LOG IN</a><br></li>
+    </div>
+
+</div>
+
+<div id="nav">
+    <li><a onclick="show_library()">LIBRARY</a></li>
+    <hr class="hr1">
+    <li><a onclick="popular()">POPULAR</a></li>
+    <hr class="hr1">
+    <li>PERIOD<br></li>
+    <hr class="hr1">
+    <ul id="period-nav">
+        <li><a onclick="periodList('Medieval')">medieval</a></li>
+        <li><a onclick="periodList('Renaissance')">renaissance</a></li>
+        <li><a onclick="periodList('Baroque')">baroque</a></li>
+        <li><a onclick="periodList('Classical')">classical</a></li>
+        <li><a onclick="periodList('Early Romantic')">early romantic</a></li>
+        <li><a onclick="periodList('Romantic')">romantic</a></li>
+        <li><a onclick="periodList('Late Romantic')">late romantic</a></li>
+        <li><a onclick="periodList('20th Century')">20th century</a></li>
+        <li><a onclick="periodList('Post-War')">post-war</a></li>
+        <li><a onclick="periodList('21st Century')">21st century</a></li>
+
+    </ul>
+</div>
+
+<div class="container">
+
+    <header class="item" id="search-box">
+        <br><br>
+        <h1>find and tag your own classic</h1>
+        <section class="search-section">
+            <hr class="hr1">
+            <input type="text" id="search-bar" autocomplete="off" placeholder="여기에 검색어를 입력해주세요"
+                   onkeyup="enterSearch()"/>
+            <a id="search-submit" onclick="searchResult()" style="text-decoration-line: none;"></a>
+
+        </section>
+    </header>
+
+    <main class="item" id="pages">
+        <article class="page" id="intro" style="text-align: center; margin-top: 50px; color: gray">
+            <br>
+            <p>
+                SONATAG는 클래식 용어인 'SONATA'와 'TAG'의 합성어로,<br>
+                클래식 음악을 쉽게 찾고 쉽게 기억하기 위해 만들어졌습니다.<br>
+                세계적으로 유명한 작곡가의 음악들, 시대별로 정리된 음악들을 <br>
+                형식에 제한 없이 자유롭게 저장해보세요.<br>
+                <br>
+                SONATAG는 저의 첫 번째 프로젝트입니다.<br>음원 스트리밍 서비스를 지원하지 않습니다.
+
+
+            </p>
+
+
+        </article>
+
+
+        <article class="page" id="search">
+
+
+            <section class="cards" id="search-cards"></section>
+            <section class="result-box" id="search-result-box"></section>
+            <a id="search-key" onclick="searchkeyCount()"> > more</a>
+
+
+        </article>
+
+        <!--       인기 작곡가         -->
+        <article class="page" id="popular">
+            <section class="cards" id="pop-cards"></section>
+        </article>
+
+        <!--       시대별       -->
+        <article class="page" id="period"></article>
+
+        <!--       시대별 작곡가         -->
+        <article class="page" id="period-list">
+            <section class="cards" id="period-cards">
+            </section>
+        </article>
+
+        <!--       라이브러리         -->
+        <article class="page" id="library">
+            <section class="title">
+                <br><br>
+                <h1>반갑습니다,<span id="name"></span>님!</h1>
+                <br>
+                <!--                    <hr>-->
+            </section>
+
+            <!--                <section class="result-box" id="library-result-box">-->
+            <section class="tag-box" id="tagbtn"></section>
+            <!--                    <hr class="hr1">-->
+            <br><br>
+            <!--                </section>-->
+
+
+        </article>
+
+        <!--       로그인         -->
+        <article class="page" id="login">
+            <section>
+                <br><br>
+                <h1>로그인</h1>
+                <br><br>
+                <section class="ID">
+                    <input type="text" class="ID" id="userid" placeholder="ID" autocomplete="off">
+                </section>
+                <section class="PW">
+                    <!--                            <input type="text" class="PW" id="userpw" placeholder="Password" autocomplete="off">-->
+                    <input type="password" class="PW" id="userpw" placeholder="Password" autocomplete="off"
+                           onkeyup="enterLogin()">
+                    <!--                            <div id="keyShow" style="width: 60px; margin: 0px auto;">PW SHOW</div>-->
+                </section>
+                <br><br>
+                <!--                    <hr>-->
+                <a class="loginbtn" onclick="login()">Log In</a>
+                <a class="signupbtn" onclick="show_register()">Sign Up</a>
+                <!--                    <br><br>-->
+                <!--                    <hr>-->
+            </section>
+
+        </article>
+
+        <!--       회원가입         -->
+        <article class="page" id="register">
+            <br><br>
+            <h1>회원가입</h1>
+            <br><br>
+            <section class="ID">
+                <input type="text" class="ID" id="userid2" placeholder="ID" autocomplete="off">
+            </section>
+            <section class="PW">
+                <!--                        <input type="text" class="PW" id="userpw2" placeholder="Password" autocomplete="off">-->
+                <input type="password" class="PW" id="userpw2" placeholder="Password" autocomplete="off"
+                       onkeyup="enterSignup()">
+                <!--                        <div id="keyShow2">SHOW</div>-->
+            </section>
+            <br><br>
+            <!--                <hr>-->
+            <a class="signupbtn" onclick="register()">Sign Up</a>
+            <!--                <br><br>-->
+            <!--                <hr>-->
+
+        </article>
+
+        <!--       팝업         -->
+        <article class="popups">
+
+            <section class="popup" id="popup-save">
+                <div class="content">
+                    <input id="tags-save" type="text" autocomplete="off" placeholder="태그는 쉼표(,)로 구분합니다"
+                           style="font-size: 20px;">
+                    <div id="btn-save">
+                        <a class="X" onclick="close_popup()">close</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popup" id="popup-edit">
+                <div class="content">
+                    <input id="tags-edit" type="text" autocomplete="off" placeholder="태그를 수정해 주세요"
+                           style="font-size: 20px;">
+                    <div id="btn-edit">
+                        <a class="X" onclick="close_popup()">close</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popup" id="popup-delete">
+                <div class="content">
+                    <div style="font-size: 20px;">정말 삭제하시겠습니까?</div>
+                    <div id="btn-delete">
+                        <a class="X" onclick="close_popup()">no</a>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+
+    </main>
+
+    <aside class="item" id="more-pages">
+        <!--       작곡가 상세 정보         -->
+        <article class="page" id="more-info">
+            <sectionv class="cards" id="more-cards"></sectionv>
+            <section class="result-box" id="more-result-box"></section>
+        </article>
+        <section class="result-box" id="library-result-box2"></section>
+
+    </aside>
+
+</div>
+
+</body>
+</html>
+
+
+
